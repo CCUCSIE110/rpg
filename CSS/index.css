@@ -44,7 +44,7 @@ html, body {
   border: 1px solid;
   border-radius: 10px;
   width: 12%;
-  margin: 2.5%;
+  margin: 1%;
   padding: 1.5%; }
 
 .stage {
@@ -65,9 +65,13 @@ html, body {
     width: 32%; }
   .in {
     width: 15px;
-    height: 15px; } }
+    height: 15px; }
+  .name {
+    font-size: 18px; } }
 
 @media screen and (max-width: 590px) {
+  .opt {
+    width: 100%; }
   .in {
     width: 10px;
     height: 10px; }
