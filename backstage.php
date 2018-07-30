@@ -6,6 +6,6 @@
     $score = $_GET['score'];
 
     $result = add_score::save($id,$success,$score);
-
-    echo $result;
+	$result2 = add_score::bonus($id);
+    echo $result . '\n' . $result2;
 
