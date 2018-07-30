@@ -43,23 +43,22 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  nav a {
-    color: rgba(231, 226, 226, 0.6); }
-  nav div {
-    border-radius: 15px;
-    font-size: 25px;
-    margin: 10px;
-    padding: 5px 10px;
-    min-width: 35%;
-    text-align: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border: 1px solid rgba(231, 226, 226, 0.6); }
-    nav div:hover {
-      border: 1px solid #e7e2e2; }
-      nav div:hover a {
-        color: #e7e2e2; }
+
+.nav-a {
+  border-radius: 15px;
+  color: rgba(231, 226, 226, 0.6);
+  font-size: 25px;
+  margin: 10px;
+  padding: 5px 10px;
+  min-width: 35%;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid rgba(231, 226, 226, 0.6); }
+.nav-a:hover {
+  color: #e7e2e2;
+  border: 1px solid #e7e2e2; }
 
 .nav_highlight {
   border: 1px solid #e7e2e2; }
