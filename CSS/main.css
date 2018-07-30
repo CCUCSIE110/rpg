@@ -45,7 +45,6 @@ nav {
   justify-content: center;
   margin-bottom: 2%; }
   nav a {
-    /* display:block; */
     color: rgba(231, 226, 226, 0.6);
     border-radius: 15px;
     font-size: 25px;
