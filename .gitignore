@@ -1,8 +1,10 @@
-#©¿²¤ config
+#ï¿½ï¿½ï¿½ï¿½ config
 config.php
 
-#©¿²¤ db
+#ï¿½ï¿½ï¿½ï¿½ db
 db.php
 
 *.scss
 *.config
+rank.json
+index.json
