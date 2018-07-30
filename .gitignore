@@ -3,3 +3,6 @@ config.php
 
 #©¿²¤ db
 db.php
+
+*.scss
+*.config
