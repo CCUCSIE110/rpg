@@ -1,0 +1,25 @@
+@charset "UTF-8";
+html, body {
+  min-width: 320px;
+  font-family: sans-serif,細明體;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  html a, body a {
+    text-decoration: none; }
+
+.img {
+  max-width: 100%;
+  height: auto; }
+
+.small_font {
+  font-size: 12px; }
+
+.word {
+  word-break: normal; }
+
+.entry {
+  margin: 10px 0; }
