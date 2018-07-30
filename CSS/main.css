@@ -66,7 +66,7 @@ nav {
     color: #e7e2e2; }
 
 @media screen and (max-width: 590px) {
-  nav div {
+  nav a {
     margin: 10px 5px;
-    width: 29%;
+    width: 60px;
     font-size: 14px; } }
