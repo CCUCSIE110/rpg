@@ -61,49 +61,6 @@ nav {
       nav div:hover a {
         color: #e7e2e2; }
 
-.rank_panel {
-  margin-top: 2%;
-  width: 75%;
-  color: rgba(236, 234, 18, 0.92);
-  font-weight: normal; }
-
-.opt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  padding: 1%;
-  border: 2px solid #9f8955;
-  border-radius: 12px;
-  margin-bottom: 1.5%;
-  -webkit-box-shadow: 4px 4px 3px rgba(51, 51, 102, 0.6);
-  box-shadow: 4px 4px 3px rgba(51, 51, 102, 0.6); }
-
-.rank {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2; }
-
-.name {
-  -webkit-box-flex: 5;
-  -ms-flex: 5;
-  flex: 5;
-  text-align: left; }
-
-.score {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2; }
-
-.opt:nth-child(odd) {
-  background-color: rgba(135, 103, 27, 0.9); }
-
-.opt:nth-child(even) {
-  background-color: #3d2906; }
-
 .nav_highlight {
   border: 1px solid #e7e2e2; }
   .nav_highlight a {
@@ -113,9 +70,4 @@ nav {
   nav div {
     margin: 10px 5px;
     width: 29%;
-    font-size: 14px; }
-  .rank_panel {
-    width: 85%; }
-  .opt {
-    margin-bottom: 2%;
-    padding: 2%; } }
+    font-size: 14px; } }
