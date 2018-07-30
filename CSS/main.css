@@ -39,7 +39,10 @@ header {
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   nav a {
     color: rgba(231, 226, 226, 0.6); }
   nav div {
@@ -47,8 +50,11 @@ nav {
     font-size: 25px;
     margin: 10px;
     padding: 5px 10px;
-    width: 180px;
+    min-width: 35%;
     text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     border: 1px solid rgba(231, 226, 226, 0.6); }
     nav div:hover {
       border: 1px solid #e7e2e2; }
@@ -58,8 +64,8 @@ nav {
 .rank_panel {
   margin-top: 2%;
   width: 75%;
-  color: rgba(255, 255, 255, 0.75);
-  /* font-weight: bold; */ }
+  color: rgba(236, 234, 18, 0.92);
+  font-weight: normal; }
 
 .opt {
   display: -webkit-box;
@@ -102,3 +108,14 @@ nav {
   border: 1px solid #e7e2e2; }
   .nav_highlight a {
     color: #e7e2e2; }
+
+@media screen and (max-width: 590px) {
+  nav div {
+    margin: 10px 5px;
+    width: 29%;
+    font-size: 14px; }
+  .rank_panel {
+    width: 85%; }
+  .opt {
+    margin-bottom: 2%;
+    padding: 2%; } }
