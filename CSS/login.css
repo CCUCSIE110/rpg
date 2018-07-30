@@ -21,5 +21,26 @@ html, body {
 .word {
   word-break: normal; }
 
+.login {
+  text-align: center;
+  width: 40%;
+  margin: 20px;
+  border: 1px solid; }
+  .login header {
+    text-align: center; }
+
 .entry {
-  margin: 10px 0; }
+  padding: 10px 20px; }
+
+.btn {
+  text-align: right; }
+  .btn button {
+    width: 70px; }
+
+input:focus {
+  /* border:0px rgb(241, 147, 22); */
+  background-color: #ccc7ec; }
+
+@media screen and (max-width: 590px) {
+  .login {
+    width: 80%; } }

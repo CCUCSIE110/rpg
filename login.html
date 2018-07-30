@@ -20,14 +20,21 @@
           <a class="nav-a" href="login.html">後臺登入</a>
       </nav>
       <div class="login">
-        <form action="login.php">
+        <header>
+          <h2>帳號登入</h2>
+        </header>
+        <form action="login.php" method="post">
           <div class="entry">
             <span class="label label-default">帳號:</span>
-            <input type="text" name="username" value="">
+            <input type="text" name="username" id="name">
           </div>
           <div class="entry">
             <span class="label label-default">密碼:</span>
-            <input type="password" name="passwd" value="">
+            <input type="password" name="passwd" id="passwd">
+          </div>
+          <div class="entry btn">
+            <button type="button" id="clear">清除</button>
+            <button type="submit" id="submit">送出</button>
           </div>
       </form>
       </div>
@@ -35,6 +42,6 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- <script src="JS/.js"></script> -->
+    <script src="JS/login.js"></script>
   </body>
 </html>
