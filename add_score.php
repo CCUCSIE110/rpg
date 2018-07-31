@@ -54,7 +54,7 @@ class add_score
 	
 	public function bonus($id)
 	{
-		$rs = $this->dbh->prepare('select * from ranks where id=:id')
+		$rs = $this->dbh->prepare('select * from ranks where id=:id');
 		$rs->bindValue(':id' , $id);
 		$rs->execute();
 		$status = $rs->fetchAll();

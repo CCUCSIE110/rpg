@@ -1,11 +1,27 @@
 <?php
     require __DIR__ . '/add_score.php';
-
-    $id = $_GET['id'];
-    $success = $_GET['success'];
-    $score = $_GET['score'];
+    require __DIR__ . '/config.php';
+    $id = $_POST['id'];
+    $success = $_POST['success'];
+    $score = $_POST['score'];
 
     $result = add_score::save($id,$success,$score);
 	$result2 = add_score::bonus($id);
-    echo $result . '\n' . $result2;
+
+	$dbh = Config::settings();
+	try
+    {
+        $rs = $dbh->prepare('update level_status set status = false where id = :id');
+        $rs->bindValue(':id', $id);
+        $test = $rs->execute();
+        if(!$test)
+            echo '狀態更新失敗：' . $rs->errorInfo();
+        else
+            echo $result . '\n' . $result2;
+    }
+    catch (PDOException $e)
+    {
+        echo "back 執行預存程序失敗. " . $e->getMessage();
+    }
+
 
