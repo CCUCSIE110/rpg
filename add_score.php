@@ -230,6 +230,17 @@ class add_score
         $rs->bindValue(':id' , $id);
         $rs->bindValue(':new' , $new);
         $rs->execute();
+        for ($i = 1 ; $i <= 10 ; $i++)
+        {
+            for ($j = 1;$j<=4;$j++)
+            {
+                $stage = $i . '-' . $j;
+                $rs = $this->dbh->prepare('update ranks set ' . $stage . '=:tmp where id=:id');
+                $rs->bindValue(':id' , $id);
+                $rs->bindValue(':tmp' , $status[$stage]);
+                $rs->execute();
+            }
+        }
 		
 		return "獲得bonus點數：" . $bonus_score;
 	}
