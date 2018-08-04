@@ -6,8 +6,8 @@
          * @param $pwd
          * @return PDO
          */
-        function connect($dsn , $user , $pwd){
-            $dbh = new PDO($dsn,$user,$pwd);
+        function connect($dsn , $user, $pwd){
+            $dbh = new PDO($dsn, $user, $pwd);
             return $dbh;
         }
     }
