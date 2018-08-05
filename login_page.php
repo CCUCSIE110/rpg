@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+  $_SESSION['user'] = 'a';
   if($_SESSION['user']){
     header("Location: ./status.php");
   }
@@ -28,7 +28,7 @@
       </nav>
       <div class="login">
         <header>
-          <h2 class="h-login">登入</h>
+          <h2 class="h-login">登入</h2>
         </header>
         <form action="login.php" method="post">
           <div class="info-entry">

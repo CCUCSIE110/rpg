@@ -1,9 +1,9 @@
-<?php
+<!-- <?php
 session_start();
 if(!$_SESSION['user']){
     header('Location: ./login_page.php');
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,16 +27,42 @@ if(!$_SESSION['user']){
             <a class="nav-a" href="login_page.php">後臺登入</a>
         </nav>
     <div class="stage">
-    </div>
-    <div class="in_stage">
+        <header>
+          <h2>關卡狀態</h2>
+        </header>
         <div class="opt">
+            <input type="radio" name="in">
             <label for="in_stage">有小隊</label>
-            <input type="radio">
         </div>
         <div class="opt">
+            <input type="radio" name="in">
             <label for="out_stage">沒小隊</label>
-            <input type="radio">
         </div>
+    </div>
+    <div class="add_score">
+      <header>
+        <h2>加分面板</h2>
+      </header>
+      <form class="score_panel">
+        <select class="" name="">
+          <option value="1">第1小關</option>
+          <option value="2">第2小關</option>
+          <option value="3">第3小關</option>
+          <option value="4">第4小關</option>
+        </select>
+        <input type="number" name="score" id="score" class="score">
+        <select class="group" name="group" id="group">
+            <option value="1">第1小隊</option>
+            <option value="2">第2小隊</option>
+            <option value="3">第3小隊</option>
+            <option value="4">第4小隊</option>
+            <option value="5">第5小隊</option>
+            <option value="6">第6小隊</option>
+            <option value="7">第7小隊</option>
+            <option value="8">第8小隊</option>
+        </select>
+        <button type="button" name="button">送出</button>
+      </form>
     </div>
 </div>
 </body>

@@ -60,6 +60,9 @@ html, body {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
+.hidden {
+  visibility: hidden; }
+
 @media screen and (max-width: 1270px) {
   .opt {
     width: 32%; }
@@ -71,9 +74,11 @@ html, body {
 
 @media screen and (max-width: 590px) {
   .opt {
-    width: 100%; }
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px; }
   .in {
     width: 10px;
     height: 10px; }
   .name {
-    font-size: 14px; } }
+    font-size: 16px; } }
