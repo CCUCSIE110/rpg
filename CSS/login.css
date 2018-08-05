@@ -14,7 +14,6 @@
   padding: 10px 20px;
   overflow: auto;
 }
-  
 
 .input-fancy {
   padding: 8px;
@@ -55,7 +54,7 @@
 
 .login {
   text-align: center;
-  width: 40%;
+  width: 50%;
   margin: 20px;
   border: 1px solid  #38f0bf;
   border-radius: 10px;
@@ -69,7 +68,7 @@
   width: 70px; }
 
 /*input:focus {
-  /* border:0px rgb(241, 147, 22); 
+  /* border:0px rgb(241, 147, 22);
   background-color: #ccc7ec; }*/
 
 @media screen and (max-width: 590px) {
