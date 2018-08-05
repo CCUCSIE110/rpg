@@ -21,10 +21,10 @@ $('.submit').on("click",()=>{
         id: $("#group").find(":selected").val(),
       })
   })
-  .then(res){
+  .then((res)=>{
     console.log("aa");
     $("#score").val("");
-  }
+  })
 })
 
 });
