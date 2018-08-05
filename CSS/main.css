@@ -4,7 +4,7 @@ html, body {
   font-family: sans-serif,細明體;
   margin: 0;
   padding: 0;
-  background-color: #222;
+  background-color: #000d1a;
   color: white;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -45,7 +45,7 @@ nav {
   justify-content: center;
   margin-bottom: 2%; }
   nav .nav-a {
-    color: rgba(231, 226, 226, 0.6);
+    color: white;
     border-radius: 15px;
     font-size: 25px;
     margin: 0 20px;
@@ -55,15 +55,19 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border: 1px solid rgba(231, 226, 226, 0.6); }
+    border: 1px solid  #38f0bf;
+    box-shadow: 0 0 30px rgba(75, 251, 207,0.4);
+  }
     nav .nav-a:hover {
-      border: 1px solid #e7e2e2;
-      color: #e7e2e2; }
+      background: linear-gradient(to right, #33ccff, #38f0bf);
+      color: #000d1a;
+    }
 
 .nav_highlight {
   border: 1px solid #e7e2e2; }
   .nav_highlight a {
     color: #e7e2e2; }
+
 
 @media screen and (max-width: 590px) {
   nav .nav-a {

@@ -1,16 +1,4 @@
 @charset "UTF-8";
-html, body {
-  min-width: 320px;
-  font-family: sans-serif,細明體;
-  margin: 0;
-  padding: 0;
-  background-color: #222;
-  color: white;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  html a, body a {
-    text-decoration: none; }
-
 .img {
   max-width: 100%;
   height: auto; }
@@ -21,25 +9,66 @@ html, body {
 .word {
   word-break: normal; }
 
+.info-entry {
+  position: relative;
+  padding: 10px 20px;
+  overflow: auto;
+}
+  
+
+.input-fancy {
+  padding: 8px;
+  padding-left: 40px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.input-fancy:focus{
+  border: 2px solid dodgerblue;
+}
+
+.input-icon {
+  position: absolute;
+  top: 21px;
+  padding-left: 7px;
+  color: #aaa;
+}
+
+.btn-fancy {
+  margin: 16px 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid  #38f0bf;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(75, 251, 207,0.4);
+  border-radius: 5px;
+  background: linear-gradient(to right, #33ccff, #38f0bf);
+  color: #000d1a;
+}
+
+.h-login {
+  margin: 5px;
+}
+
 .login {
   text-align: center;
   width: 40%;
   margin: 20px;
-  border: 1px solid; }
+  border: 1px solid  #38f0bf;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(75, 251, 207,0.4); }
   .login header {
     text-align: center; }
 
-.entry {
-  padding: 10px 20px; }
-
 .btn {
-  text-align: right; }
-  .btn button {
-    width: 70px; }
+  text-align: center; }
+.btn button {
+  width: 70px; }
 
-input:focus {
-  /* border:0px rgb(241, 147, 22); */
-  background-color: #ccc7ec; }
+/*input:focus {
+  /* border:0px rgb(241, 147, 22); 
+  background-color: #ccc7ec; }*/
 
 @media screen and (max-width: 590px) {
   .login {

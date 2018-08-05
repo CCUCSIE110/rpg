@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>RPG </title>
-
+ 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/main.css" >
     <link rel="stylesheet" href="./CSS/login.css" >
   </head>
   <body>
     <div class="panel">
       <header>
-        <h2>CSIE X  CHI Camp</h2>
+        <h1>CSIE X  CHI Camp</h1>
       </header>
       <nav>
           <a class="nav-a" href="index.html">首頁</a>
@@ -21,20 +22,20 @@
       </nav>
       <div class="login">
         <header>
-          <h2>帳號登入</h2>
+          <h2 class="h-login">登入</h>
         </header>
         <form action="login.php" method="post">
-          <div class="entry">
-            <span class="label label-default">帳號:</span>
-            <input type="text" name="username" id="name">
+          <div class="info-entry">
+            <i class="fas fa-user fa-lg fa-fw input-icon"></i>
+            <input class="input-fancy" type="text" name="username" id="name" placeholder="帳號">
           </div>
-          <div class="entry">
-            <span class="label label-default">密碼:</span>
-            <input type="password" name="passwd" id="passwd">
+          <div class="info-entry">
+            <i class="fas fa-lock fa-lg fa-fw input-icon"></i>
+            <input class="input-fancy" type="password" name="passwd" id="passwd" placeholder="密碼">
           </div>
           <div class="entry btn">
-            <button type="button" id="clear">清除</button>
-            <button type="submit" id="submit">送出</button>
+            <button class="btn-fancy" type="button" id="clear">清除</button>
+            <button class="btn-fancy" type="submit" id="submit">送出</button>
           </div>
       </form>
       </div>

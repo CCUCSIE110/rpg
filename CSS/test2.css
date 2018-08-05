@@ -4,7 +4,7 @@ html, body {
   font-family: sans-serif,細明體;
   margin: 0;
   padding: 0;
-  background-color: #000d1a;
+  background: linear-gradient(to bottom right, #ffbf80, #ffb3b3) fixed;
   color: white;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -41,9 +41,8 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid  #38f0bf;
+  border: 1px solid;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(75, 251, 207,0.4);
   width: 12%;
   margin: 1%;
   padding: 1.5%; }
@@ -60,11 +59,6 @@ html, body {
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
-
-
-.hidden {
-  visibility: hidden;
-}
 
 @media screen and (max-width: 1270px) {
   .opt {
