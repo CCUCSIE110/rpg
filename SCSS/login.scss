@@ -1,0 +1,73 @@
+@import "_var.scss";
+@import "_reset.scss";
+@import "_function.scss";
+
+.info-entry {
+  position: relative;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+.input-fancy {
+  padding: 8px;
+  padding-left: 40px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.input-fancy:focus {
+  border: 1px solid dodgerblue;
+}
+
+.input-icon {
+  position: absolute;
+  top: 21px;
+  padding-left: 7px;
+  color: #aaa;
+}
+
+.btn-fancy {
+  margin: 16px 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #38f0bf;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(75, 251, 207, 0.4);
+  border-radius: 5px;
+  background: linear-gradient(to right, #33ccff, #38f0bf);
+  color: #000d1a;
+}
+
+.h-login {
+  margin: 5px;
+}
+
+.login {
+  text-align: center;
+  width: 50%;
+  margin: 20px;
+  border: 1px solid #38f0bf;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(75, 251, 207, 0.4);
+}
+
+.login header {
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn button {
+  width: 70px;
+}
+
+@media screen and (max-width: 590px) {
+  .login {
+    width: 80%;
+  }
+}

@@ -56,18 +56,19 @@ nav {
     -ms-flex-align: center;
     align-items: center;
     border: 1px solid  #38f0bf;
-    box-shadow: 0 0 30px rgba(75, 251, 207,0.4);
-  }
+    -webkit-box-shadow: 0 0 30px rgba(75, 251, 207, 0.4);
+    box-shadow: 0 0 30px rgba(75, 251, 207, 0.4); }
     nav .nav-a:hover {
+      background: -webkit-gradient(linear, left top, right top, from(#33ccff), to(#38f0bf));
+      background: -webkit-linear-gradient(left, #33ccff, #38f0bf);
+      background: -o-linear-gradient(left, #33ccff, #38f0bf);
       background: linear-gradient(to right, #33ccff, #38f0bf);
-      color: #000d1a;
-    }
+      color: #000d1a; }
 
 .nav_highlight {
   border: 1px solid #e7e2e2; }
   .nav_highlight a {
     color: #e7e2e2; }
-
 
 @media screen and (max-width: 590px) {
   nav .nav-a {

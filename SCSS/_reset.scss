@@ -1,0 +1,16 @@
+html,body{
+  min-width: 320px;
+  font-family: sans-serif,細明體;
+  margin: 0;
+  padding: 0;
+  background-color: $bg_color;
+  color: $font_color;
+  box-sizing: border-box;
+  a {
+    text-decoration:none;
+  }
+}
+.img{
+  max-width:100%;
+  height: auto
+}

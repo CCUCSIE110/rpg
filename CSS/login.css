@@ -1,4 +1,16 @@
 @charset "UTF-8";
+html, body {
+  min-width: 320px;
+  font-family: sans-serif,細明體;
+  margin: 0;
+  padding: 0;
+  background-color: #000d1a;
+  color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  html a, body a {
+    text-decoration: none; }
+
 .img {
   max-width: 100%;
   height: auto; }
@@ -13,7 +25,8 @@
   position: relative;
   padding: 10px 20px;
 
-}
+
+  overflow: auto; }
 
 .input-fancy {
   padding: 8px 8px 8px 40px;
@@ -25,51 +38,50 @@
   box-sizing: border-box;
 }
 
-.input-fancy:focus{
-  border: 1px solid dodgerblue;
-}
+.input-fancy:focus {
+  border: 1px solid dodgerblue; }
 
 .input-icon {
   position: absolute;
   top: 37%;
   padding-left: 7px;
-  color: #aaa;
-}
+  color: #aaa; }
 
 .btn-fancy {
   margin: 16px 8px;
   padding: 5px 10px;
   font-size: 14px;
-  border: 1px solid  #38f0bf;
+  border: 1px solid #38f0bf;
   border-radius: 5px;
-  box-shadow: 0 0 30px rgba(75, 251, 207,0.4);
+  -webkit-box-shadow: 0 0 30px rgba(75, 251, 207, 0.4);
+  box-shadow: 0 0 30px rgba(75, 251, 207, 0.4);
   border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#33ccff), to(#38f0bf));
+  background: -webkit-linear-gradient(left, #33ccff, #38f0bf);
+  background: -o-linear-gradient(left, #33ccff, #38f0bf);
   background: linear-gradient(to right, #33ccff, #38f0bf);
-  color: #000d1a;
-}
+  color: #000d1a; }
 
 .h-login {
-  margin: 5px;
-}
+  margin: 5px; }
 
 .login {
   text-align: center;
   width: 50%;
   margin: 20px;
-  border: 1px solid  #38f0bf;
+  border: 1px solid #38f0bf;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(75, 251, 207,0.4); }
-  .login header {
-    text-align: center; }
+  -webkit-box-shadow: 0 0 25px rgba(75, 251, 207, 0.4);
+  box-shadow: 0 0 25px rgba(75, 251, 207, 0.4); }
+
+.login header {
+  text-align: center; }
 
 .btn {
   text-align: center; }
+
 .btn button {
   width: 70px; }
-
-/*input:focus {
-  /* border:0px rgb(241, 147, 22); 
-  background-color: #ccc7ec; }*/
 
 @media screen and (max-width: 590px) {
   .login {

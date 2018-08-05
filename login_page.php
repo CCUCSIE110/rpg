@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  $_SESSION['user'] = 'a';
+  if($_SESSION['user']){
+    header("Location: ./status.php");
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>RPG </title>
- 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/main.css" >
     <link rel="stylesheet" href="./CSS/login.css" >
@@ -18,11 +24,11 @@
       <nav>
           <a class="nav-a" href="index.html">首頁</a>
           <a class="nav-a" href="rank.html">排名</a>
-          <a class="nav-a" href="login.html">後臺登入</a>
+          <a class="nav-a" href="login_page.php">後臺登入</a>
       </nav>
       <div class="login">
         <header>
-          <h2 class="h-login">登入</h>
+          <h2 class="h-login">登入</h2>
         </header>
         <form action="login.php" method="post">
           <div class="info-entry">

@@ -1,0 +1,51 @@
+.panel > * {
+  /* margin-bottom: 10px; */ }
+
+header > h2 {
+  text-align: center; }
+
+.stage {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 20px; }
+  .stage > .opt {
+    display: inline; }
+
+.stage {
+  border: 1px solid;
+  margin-bottom: 2%; }
+
+.opt {
+  margin: 3px 9px; }
+
+.add_score {
+  margin-top: 10px;
+  border: 1px solid;
+  width: 50%;
+  padding-bottom: 20px; }
+
+.score_panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.group {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+
+.score {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0px;
+  margin: 0;
+  padding: 0; }
+
+@media screen and (max-width: 590px) {
+  .add_score {
+    width: 80%; }
+  .stage {
+    width: 80%; } }

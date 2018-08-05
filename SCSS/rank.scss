@@ -1,0 +1,43 @@
+@import "_function.scss";
+
+.rank_panel{
+  margin-top: 2%;
+  width:75%;
+  color:rgba(#ecea12, 0.92);
+  font-weight: normal;
+}
+.opt{
+  display:flex;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid rgb(159, 137, 85);
+  border-radius:12px;
+  margin-bottom: 1.5%;
+  box-shadow:4px 4px 3px rgba(20%,20%,40%,0.6);
+}
+.rank{
+  flex:2;
+}
+.name{
+  flex:5;
+  text-align: left;
+}
+.score{
+  flex:2;
+}
+.opt:nth-child(odd){
+  background-color:rgba(135, 103, 27, 0.9);
+}
+.opt:nth-child(even){
+  background-color:rgba(61, 41, 6, 1);
+}
+@media screen and (max-width: 590px) {
+  .rank_panel{
+    width:85%;
+  }
+  .opt{
+    margin-bottom: 2%;
+    padding: 2%;
+  }
+}
