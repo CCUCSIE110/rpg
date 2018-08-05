@@ -67,9 +67,6 @@
 .btn button {
   width: 70px; }
 
-/*input:focus {
-  /* border:0px rgb(241, 147, 22);
-  background-color: #ccc7ec; }*/
 
 @media screen and (max-width: 590px) {
   .login {
