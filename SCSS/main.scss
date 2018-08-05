@@ -1,0 +1,45 @@
+@import "_var.scss";
+@import "_reset.scss";
+@import "_function.scss";
+
+.panel{
+  display:flex;
+  flex-flow:wrap column;
+  align-items: center;
+}
+header{
+  margin-top: 10px;;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+  .nav-a{
+    color: rgba(231, 226, 226,0.6);
+    border-radius:15px;
+    font-size: 25px;
+    margin:0 20px;
+    padding: 5px 15px;
+    width: 110px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid rgba(231, 226, 226,0.6);
+    &:hover{
+      border: 1px solid rgba(231, 226, 226,1);
+      color: rgba(231, 226, 226,1);
+    }
+  }
+}
+.nav_highlight{
+  border: 1px solid rgba(231, 226, 226,1);
+  a{
+    color: rgba(231, 226, 226,1);
+  }
+}
+@media screen and (max-width: 590px) {
+  nav .nav-a{
+    margin: 10px 5px;
+    width:60px;
+    font-size: 14px;
+  }
+}

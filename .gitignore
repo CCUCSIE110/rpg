@@ -4,5 +4,5 @@ config.php
 #���� db
 db.php
 
-*.scss
-*.config
+# *.scss
+# *.config
