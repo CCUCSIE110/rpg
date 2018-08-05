@@ -1,3 +1,4 @@
+<h1>test</h1>
 <?php
     require_once __DIR__ . '/config.php';
     $dbh = Config::settings();

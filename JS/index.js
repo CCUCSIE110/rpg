@@ -24,7 +24,7 @@ function show_stage(data) {
         data.forEach((o)=>{
           html +=`
           <div class="opt">
-            <i class="fas fa-child ${o.in>0?"":"hidden"}"></i>
+            <i class="fas fa-child fa-lg fa-fw ${o.in>0?"":"hidden"}"></i>
             <div class="name">${o.name}</div>
           </div>
           `

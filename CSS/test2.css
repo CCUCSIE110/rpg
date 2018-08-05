@@ -1,79 +1,46 @@
 @charset "UTF-8";
 html, body {
-  min-width: 320px;
-  font-family: sans-serif,細明體;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #ffbf80, #ffb3b3) fixed;
-  color: white;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  html a, body a {
-    text-decoration: none; }
+	min-width: 320px;
+	font-family: sans-serif,細明體;
+margin: 0;
+padding: 0;
+		 background-color: #222;
+color: white;
+	   -webkit-box-sizing: border-box;
+	   box-sizing: border-box; }
+	   html a, body a {
+		   text-decoration: none; }
 
-.img {
-  max-width: 100%;
-  height: auto; }
+		   .img {
+			   max-width: 100%;
+height: auto; }
 
 .small_font {
-  font-size: 12px; }
+	font-size: 12px; }
 
-.word {
-  word-break: normal; }
+	.word {
+		word-break: normal; }
 
-.in {
-  margin: 5px 10px;
-  width: 25px;
-  height: 25px; }
+		.login {
+			text-align: center;
+width: 40%;
+margin: 20px;
+border: 1px solid; }
+.login header {
+	text-align: center; }
 
-.round_red {
-  border-radius: 50%;
-  background-color: red; }
+	.entry {
+padding: 10px 20px; }
 
-.opt div {
-  /* padding: 10px; */
-  margin: 0 10px; }
+.btn {
+	text-align: right; }
+	.btn button {
+width: 70px; }
 
-.opt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid;
-  border-radius: 10px;
-  width: 12%;
-  margin: 1%;
-  padding: 1.5%; }
-
-.stage {
-  width: 85%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
-
-@media screen and (max-width: 1270px) {
-  .opt {
-    width: 32%; }
-  .in {
-    width: 15px;
-    height: 15px; }
-  .name {
-    font-size: 18px; } }
+input:focus {
+		  /* border:0px rgb(241, 147, 22); */
+		  background-color: #ccc7ec; }
 
 @media screen and (max-width: 590px) {
-  .opt {
-    width: 100%; }
-  .in {
-    width: 10px;
-    height: 10px; }
-  .name {
-    font-size: 14px; } }
+			  .login {
+width: 80%; } }
