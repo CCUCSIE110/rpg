@@ -21,6 +21,10 @@ html, body {
 .word {
   word-break: normal; }
 
+.fa-child {
+	  color: #ff8080;
+}
+
 .in {
   margin: 5px 10px;
   width: 25px;
@@ -74,7 +78,8 @@ html, body {
 
 @media screen and (max-width: 590px) {
   .opt {
-    width: 40%;
+  	margin: 2% 3%;
+    width: 35%;
     padding: 10px;
     margin-bottom: 10px; }
   .in {
