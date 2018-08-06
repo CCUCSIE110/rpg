@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $_SESSION['user'] = 'a';
+  // $_SESSION['user'] = 'a';
   if($_SESSION['user']){
     header("Location: ./status.php");
   }

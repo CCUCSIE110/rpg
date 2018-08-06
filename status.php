@@ -1,9 +1,9 @@
-<!-- <?php
+<?php
 session_start();
 if(!$_SESSION['user']){
     header('Location: ./login_page.php');
 }
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +31,11 @@ if(!$_SESSION['user']){
           <h2>關卡狀態</h2>
         </header>
         <div class="opt">
-            <input type="radio" name="in">
+            <input type="radio" name="in" clss="in" value="in">
             <label for="in_stage">有小隊</label>
         </div>
         <div class="opt">
-            <input type="radio" name="in">
+            <input type="radio" name="in" class="in" value="out" checked>
             <label for="out_stage">沒小隊</label>
         </div>
     </div>
@@ -44,7 +44,7 @@ if(!$_SESSION['user']){
         <h2>加分面板</h2>
       </header>
       <form class="score_panel">
-        <select class="" name="">
+        <select class="level" name="level" id="level">
           <option value="1">第1小關</option>
           <option value="2">第2小關</option>
           <option value="3">第3小關</option>
@@ -61,9 +61,11 @@ if(!$_SESSION['user']){
             <option value="7">第7小隊</option>
             <option value="8">第8小隊</option>
         </select>
-        <button type="button" name="button">送出</button>
+        <button type="button" name="button" class="submit">送出</button>
       </form>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="JS/status.js"></script>
 </body>
 </html>
