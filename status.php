@@ -1,8 +1,28 @@
 <?php
-session_start();
-if(!$_SESSION['user']){
-    header('Location: ./login_page.php');
-}
+    require __DIR__ . "/config.php";
+
+    session_start();
+    if(!$_SESSION['user']){
+        header('Location: ./login_page.php');
+    }
+
+    $status = $_POST["status"];
+    $id = $_SESSION['user'];
+    $dbh = Config::settings();
+
+    if($status)
+    {
+        $rs = $dbh->prepare("UPDATE stage_status SET status = TRUE WHERE id = :id");
+        $rs->bindValue(":id",$id);
+        $rs->execute();
+    }
+    elseif (!$status)
+    {
+        $rs = $dbh->prepare("UPDATE stage_status SET status = FALSE WHERE id = :id");
+        $rs->bindValue(":id",$id);
+        $rs->execute();
+    }
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
