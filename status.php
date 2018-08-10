@@ -48,7 +48,7 @@
         </nav>
     <div class="stage">
         <header>
-          <h2>關卡狀態</h2>
+            <h2>關卡狀態</h2>
         </header>
         <div class="opt">
             <input type="radio" name="in" clss="in" value="in">
@@ -60,17 +60,16 @@
         </div>
     </div>
     <div class="add_score">
-      <header>
+    <header>
         <h2>加分面板</h2>
-      </header>
-      <form class="score_panel">
-        <select class="level" name="level" id="level">
-          <option value="1">第1小關</option>
-          <option value="2">第2小關</option>
-          <option value="3">第3小關</option>
-          <option value="4">第4小關</option>
+    </header>
+    <form class="score_panel">
+    <select class="level" name="level" id="level">
+        <option value="1">第1小關</option>
+        <option value="2">第2小關</option>
+        <option value="3">第3小關</option>
+        <option value="4">第4小關</option>
         </select>
-        <input type="number" name="score" id="score" class="score">
         <select class="group" name="group" id="group">
             <option value="1">第1小隊</option>
             <option value="2">第2小隊</option>
@@ -82,7 +81,7 @@
             <option value="8">第8小隊</option>
         </select>
         <button type="button" name="button" class="submit">送出</button>
-      </form>
+    </form>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
