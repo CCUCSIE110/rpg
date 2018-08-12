@@ -20,7 +20,7 @@ class add_score
         $this->user = $_SESSION['user'];
     }
 
-    public function save($id,$success,$score)
+    public function save($id,$success)
     {
         $stage = $this->user . '-' . $success;
         $rs = $this->dbh->prepare('select * from ranks where id=:id and ' . $stage . '=0');
@@ -40,10 +40,13 @@ class add_score
             $rs = $this->dbh->prepare('select score from ranks where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->execute();
-
             $tmp = $rs->fetch();
-            $new = $score + $tmp['score'];
 
+            $rs = $this->dbh->prepare('SELECT score FROM stage_score WHERE stage=:stage');
+            $rs->bindValue(':stage' , $stage);
+            $rs->execute();
+            $score = $rs->fetch();
+            $new = $score[0]+$tmp['score'];
             $rs = $this->dbh->prepare('update ranks set score=:new where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->bindValue(':new' , $new);

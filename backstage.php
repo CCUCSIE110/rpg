@@ -3,9 +3,8 @@
     require __DIR__ . '/config.php';
     $id = $_POST['id'];
     $stage = $_POST['stage'];
-    $score = $_POST['score'];
 
-    $result = add_score::save($id,$stage,$score);
+    $result = add_score::save($id,$stage);
 	$result2 = add_score::bonus($id);
 
 //	$dbh = Config::settings();
