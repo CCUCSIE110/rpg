@@ -12,13 +12,13 @@
 
     if($status)
     {
-        $rs = $dbh->prepare("UPDATE stage_status SET status = TRUE WHERE id = :id");
+        $rs = $dbh->prepare("UPDATE stage_status SET status = FALSE WHERE id = :id");
         $rs->bindValue(":id",$id);
         $rs->execute();
     }
-    elseif (!$status)
+    else
     {
-        $rs = $dbh->prepare("UPDATE stage_status SET status = FALSE WHERE id = :id");
+        $rs = $dbh->prepare("UPDATE stage_status SET status = TRUE WHERE id = :id");
         $rs->bindValue(":id",$id);
         $rs->execute();
     }
