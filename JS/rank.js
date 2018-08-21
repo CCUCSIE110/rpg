@@ -1,6 +1,6 @@
 $(document).ready(function(){
   let data;
-  $.getJSON("rank.json").then((res)=>{
+  $.getJSON("rank.php").then((res)=>{
     data = res.data;
     console.log(data);
     show_rank(data);
@@ -14,7 +14,7 @@ $(document).ready(function(){
     $(o.target).addClass("nav_highlight");
   });
   setInterval(()=>{
-    fetch("./rank.json").then((response)=>{
+    fetch("./rank.php").then((response)=>{
       return response.json();
     }).then((j)=>{
       console.log(j.data);
@@ -42,7 +42,7 @@ promise
         html += `
           <div class="opt">
             <div class="rank">${i+1}</div>
-            <div class="name">${o.name}</div>
+            <div class="name">${o.id}</div>
             <div class="score">${o.score}</div>
           </div>`;
       });
