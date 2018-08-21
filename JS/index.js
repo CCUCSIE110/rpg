@@ -6,7 +6,7 @@ $(document).ready(function(){
   })
 });
 setInterval(()=>{
-  fetch("./index.json").then((response)=>{
+  fetch("./index.php").then((response)=>{
     return response.json();
   }).then((j)=>{
     show_stage(j.data);
@@ -24,8 +24,8 @@ function show_stage(data) {
         data.forEach((o)=>{
           html +=`
           <div class="opt">
-            <i class="fas fa-child fa-lg fa-fw ${o.in>0?"":"hidden"}"></i>
-            <div class="name">${o.name}</div>
+            <i class="fas fa-child fa-lg fa-fw ${o.status>0?"":"hidden"}"></i>
+            <div class="name">${o.id}</div>
           </div>
           `
         })
