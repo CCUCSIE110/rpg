@@ -43,18 +43,24 @@
         <nav>
             <a class="nav-a" href="index.html">首頁</a>
             <a class="nav-a" href="rank.html">排名</a>
-            <a class="nav-a" href="login_page.php">後臺登入</a>
+            <?php
+            if($status==true){
+                echo '<a class="nav-a" href="login_page.php">後臺登入</a>';
+            }else{
+                echo '<a class=" nav-a" href=" logout.php ">後臺登出</a>';
+            }
+            ?>
         </nav>
     <div class="stage">
         <header>
             <h2>關卡狀態</h2>
         </header>
         <div class="opt">
-            <input type="radio" name="in" clss="in" value="in">
+            <input type="radio" name="in" clss="in" value="in"<?php echo $status==true? "checked" : "" ?>>
             <label for="in_stage">有小隊</label>
         </div>
         <div class="opt">
-            <input type="radio" name="in" class="in" value="out" checked>
+            <input type="radio" name="in" class="in" value="out" <?php echo $status == false ? "" : "checked" ?>>
             <label for="out_stage">沒小隊</label>
         </div>
     </div>
