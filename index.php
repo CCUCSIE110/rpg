@@ -4,7 +4,7 @@
     $dbh = Config::setting();
     try
     {
-        $rs = $dbh->prepare('select id from level_status where status = true ');
+        $rs = $dbh->prepare('select id from stage_status where status = true ');
         $rs->execute();
         $result = $rs->fetchAll();
         echo json_encode($result);

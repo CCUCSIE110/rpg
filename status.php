@@ -23,7 +23,6 @@
         $rs->execute();
     }
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

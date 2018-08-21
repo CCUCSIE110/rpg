@@ -40,12 +40,15 @@ class add_score
             $rs = $this->dbh->prepare('select score from ranks where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->execute();
+
             $tmp = $rs->fetch();
 
             $rs = $this->dbh->prepare('SELECT score FROM stage_score WHERE stage=:stage');
             $rs->bindValue(':stage' , $stage);
             $rs->execute();
+
             $score = $rs->fetch();
+
             $new = $score[0]+$tmp['score'];
             $rs = $this->dbh->prepare('update ranks set score=:new where id=:id');
             $rs->bindValue(':id' , $id);

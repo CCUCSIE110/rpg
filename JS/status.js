@@ -12,7 +12,6 @@ $(document).ready(function(){
 
 
 $('.submit').on("click",()=>{
-  console.log($("#score").val()?$("#score").val():0);
   fetch('backstage.php',
   {   method: 'post',
       body: JSON.stringify({
@@ -22,7 +21,6 @@ $('.submit').on("click",()=>{
   })
   .then((res)=>{
     console.log("aa");
-    $("#score").val("");
   })
 })
 

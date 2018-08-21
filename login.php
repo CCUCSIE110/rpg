@@ -21,6 +21,7 @@
         {
             echo '登入成功';
     		$_SESSION['user'] = $username;
+    		header("Location: ./status.php");
   		//  $_SESSION['pass'] = $passwd;
         }
     }
