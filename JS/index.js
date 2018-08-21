@@ -25,7 +25,7 @@ function show_stage(data) {
           html +=`
           <div class="opt">
             <i class="fas fa-child fa-lg fa-fw ${o.status>0?"":"hidden"}"></i>
-            <div class="name">${o.id}</div>
+            <div class="name">${o.stage_name}</div>
           </div>
           `
         })
