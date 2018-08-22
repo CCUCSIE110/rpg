@@ -14,6 +14,9 @@ $(document).ready(function(){
 $('.submit').on("click",()=>{
   fetch('backstage.php',
   {   method: 'post',
+      headers:{
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         stage: $("#level").find(":selected").val(),
         id: $("#group").find(":selected").val(),

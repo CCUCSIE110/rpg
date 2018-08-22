@@ -56,7 +56,7 @@
             <h2>關卡狀態</h2>
         </header>
         <div class="opt">
-            <input type="radio" name="in" clss="in" value="in"<?php echo $status==true? "checked" : "" ?>>
+            <input type="radio" name="in" class="in" value="in"<?php echo $status==true? "checked" : "" ?>>
             <label for="in_stage">有小隊</label>
         </div>
         <div class="opt">
