@@ -15,7 +15,7 @@ $('.submit').on("click",()=>{
   fetch('backstage.php',
   {   method: 'post',
       headers:{
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
       },
       body: JSON.stringify({
         stage: $("#level").find(":selected").val(),
