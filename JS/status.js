@@ -18,6 +18,7 @@ $('.submit').on("click",()=>{
       body: 'stage=' + $("#level").find(":selected").val() + '&id=' + $("#group").find(":selected").val()
   })
   .then((res)=>{
+    alert("加分成功");
     console.log("aa");
   })
 })
