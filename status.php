@@ -5,23 +5,29 @@
     if(!$_SESSION['user']){
         header('Location: ./login_page.php');
     }
+	
 
     $status = $_POST["status"];
     $id = $_SESSION['user'];
     $dbh = Config::settings();
 
-    if($status)
-    {
-        $rs = $dbh->prepare("UPDATE stage_status SET status = FALSE WHERE id = :id");
-        $rs->bindValue(":id",$id);
-        $rs->execute();
-    }
-    else
-    {
-        $rs = $dbh->prepare("UPDATE stage_status SET status = TRUE WHERE id = :id");
-        $rs->bindValue(":id",$id);
-        $rs->execute();
-    }
+	
+	if(isset($_POST["status"])) {
+  	    if($status == "true")
+   	    {
+    		$_SESSION['status'] = 1;
+            $rs = $dbh->prepare("UPDATE stage_status SET status = 1 WHERE id = :id");
+            $rs->bindValue(":id",$id);
+            $rs->execute();
+        }
+        else
+        {
+    		$_SESSION['status'] = 0;
+            $rs = $dbh->prepare("UPDATE stage_status SET status = 0 WHERE id = :id");
+            $rs->bindValue(":id",$id);
+            $rs->execute();
+        }
+	}
 ?>
 
 <!DOCTYPE html>
@@ -44,18 +50,24 @@
         <nav>
             <a class="nav-a" href="index.html">首頁</a>
             <a class="nav-a" href="rank.html">排名</a>
-            <a class="nav-a" href="login_page.php">後臺登入</a>
+            <?php
+            if(!isset($_SESSION['user'])){
+                echo '<a class="nav-a" href="login_page.php">後臺登入</a>';
+            }else{
+                echo '<a class="nav-a" href="logout.php">後臺登出</a>';
+            }
+            ?>
         </nav>
     <div class="stage">
         <header>
             <h2>關卡狀態</h2>
         </header>
         <div class="opt">
-            <input type="radio" name="in" class="in" value="in">
+            <input type="radio" name="in" class="in" value="in"<?php echo $_SESSION['status']==1? "checked" : "" ?>>
             <label for="in_stage">有小隊</label>
         </div>
         <div class="opt">
-            <input type="radio" name="in" class="in" value="out" checked>
+            <input type="radio" name="in" class="in" value="out" <?php echo $_SESSION['status']==1? "" : "checked" ?>>
             <label for="out_stage">沒小隊</label>
         </div>
     </div>

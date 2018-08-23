@@ -1,10 +1,10 @@
 <?php
     require_once __DIR__ . '/config.php';
 
-    $dbh = Config::setting();
+    $dbh = Config::settings();
     try
     {
-        $rs = $dbh->prepare('select * from stage_status');
+        $rs = $dbh->prepare("SELECT * FROM `stage_status`");
         $rs->execute();
         $result = $rs->fetchAll();
         echo json_encode($result);
@@ -13,4 +13,4 @@
     {
         echo "index 執行預存程序失敗. ".$e->getMessage();
     }
-    ?>
+?>

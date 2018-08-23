@@ -4,7 +4,7 @@
     $dbh = Config::settings();
     try
     {
-        $rs = $dbh->prepare('select * from ranks order by score desc ');
+        $rs = $dbh->prepare('SELECT id, name, score FROM rank ORDER BY score DESC ');
         $rs->execute();
         $result = $rs->fetchAll();
         echo json_encode($result);

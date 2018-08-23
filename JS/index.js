@@ -1,15 +1,15 @@
 $(document).ready(function(){
-  $.getJSON("index.json").then((res)=>{
+  $.getJSON("index.php").then((res)=>{
     console.log("A");
-    console.log(res.data);
-    show_stage(res.data);
+    console.log(res);
+    show_stage(res);
   })
 });
 setInterval(()=>{
   fetch("./index.php").then((response)=>{
     return response.json();
   }).then((j)=>{
-    show_stage(j.data);
+    show_stage(j);
   })
 },15000)
 function show_stage(data) {
@@ -25,7 +25,7 @@ function show_stage(data) {
           html +=`
           <div class="opt">
             <i class="fas fa-child fa-lg fa-fw ${o.status>0?"":"hidden"}"></i>
-            <div class="name">${o.id}</div>
+            <div class="name">${o.stage_name}</div>
           </div>
           `
         })

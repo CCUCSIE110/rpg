@@ -1,12 +1,16 @@
 <?php
     require __DIR__ . '/add_score.php';
-    require __DIR__ . '/config.php';
+//    $id = $_GET['id'];
+//    $stage = $_GET['stage'];
     $id = $_POST['id'];
     $stage = $_POST['stage'];
+	
+	echo $id . 'stage=' . $stage;
+	$addScore = new add_score();
+    $result = $addScore->save($id, $stage);
+	$result2 = $addScore->bonus($id);
 
-    $result = add_score::save($id,$stage);
-	$result2 = add_score::bonus($id);
-
+//	echo $result;
 //	$dbh = Config::settings();
 //	try
 //    {
@@ -23,4 +27,4 @@
 //        echo "back 執行預存程序失敗. " . $e->getMessage();
 //    }
 
-
+?>

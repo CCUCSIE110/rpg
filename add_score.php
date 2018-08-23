@@ -8,6 +8,7 @@
 require_once __DIR__ . '/config.php';
 session_start();
 
+
 class add_score
 {
 
@@ -20,10 +21,12 @@ class add_score
         $this->user = $_SESSION['user'];
     }
 
-    public function save($id,$success)
+    public function save($id, $success)
     {
+    	echo "save\n";
         $stage = $this->user . '-' . $success;
-        $rs = $this->dbh->prepare('select * from ranks where id=:id and ' . $stage . '=0');
+        echo $stage;
+        $rs = $this->dbh->prepare('select * from rank where id=:id and `' . $stage . '`=0');
         $rs->bindValue(':id' , $id);
         $rs->execute();
 
@@ -33,11 +36,11 @@ class add_score
         }
         else
         {
-            $rs = $this->dbh->prepare('update ranks set ' . $stage . '=1 where id=:id');
+            $rs = $this->dbh->prepare('update rank set `' . $stage . '`=1 where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->execute();
 
-            $rs = $this->dbh->prepare('select score from ranks where id=:id');
+            $rs = $this->dbh->prepare('select score from rank where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->execute();
 
@@ -50,7 +53,7 @@ class add_score
             $score = $rs->fetch();
 
             $new = $score[0]+$tmp['score'];
-            $rs = $this->dbh->prepare('update ranks set score=:new where id=:id');
+            $rs = $this->dbh->prepare('update rank set score=:new where id=:id');
             $rs->bindValue(':id' , $id);
             $rs->bindValue(':new' , $new);
             $rs->execute();
@@ -60,7 +63,7 @@ class add_score
 	
 	public function bonus($id)
 	{
-		$rs = $this->dbh->prepare('select * from ranks where id=:id');
+		$rs = $this->dbh->prepare('select * from rank where id=:id');
 		$rs->bindValue(':id' , $id);
 		$rs->execute();
 		$status = $rs->fetchAll();
@@ -232,7 +235,8 @@ class add_score
 		}
 		
 		$new = $status['score'] + $bonus_score;
-		$rs = $this->dbh->prepare('update ranks set score=:new where id=:id');
+		echo "new".$new;
+		$rs = $this->dbh->prepare('update rank set score=:new where id=:id');
         $rs->bindValue(':id' , $id);
         $rs->bindValue(':new' , $new);
         $rs->execute();
@@ -241,7 +245,7 @@ class add_score
             for ($j = 1;$j<=4;$j++)
             {
                 $stage = $i . '-' . $j;
-                $rs = $this->dbh->prepare('update ranks set ' . $stage . '=:tmp where id=:id');
+                $rs = $this->dbh->prepare('update rank set `' . $stage . '`=:tmp where id=:id');
                 $rs->bindValue(':id' , $id);
                 $rs->bindValue(':tmp' , $status[$stage]);
                 $rs->execute();

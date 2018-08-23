@@ -1,7 +1,7 @@
 $(document).ready(function(){
   let data;
   $.getJSON("rank.php").then((res)=>{
-    data = res.data;
+    data = res;
     console.log(data);
     show_rank(data);
   });
@@ -15,10 +15,11 @@ $(document).ready(function(){
   });
   setInterval(()=>{
     fetch("./rank.php").then((response)=>{
+      console.log(response.json());
       return response.json();
     }).then((j)=>{
-      console.log(j.data);
-      show_rank(j.data);
+      console.log(j);
+      show_rank(j);
 
     }).catch((err)=>{
       console.log(err);
@@ -42,7 +43,7 @@ promise
         html += `
           <div class="opt">
             <div class="rank">${i+1}</div>
-            <div class="name">${o.id}</div>
+            <div class="name">${o.name}</div>
             <div class="score">${o.score}</div>
           </div>`;
       });
