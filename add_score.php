@@ -66,8 +66,23 @@ class add_score
 		$rs = $this->dbh->prepare('select * from rank where id=:id');
 		$rs->bindValue(':id' , $id);
 		$rs->execute();
-		$status = $rs->fetchAll();
+		$tmp = $rs->fetchAll();
+		$status = $tmp[0];
 		$bonus_score = 0;
+		print_r($status);
+		echo "<br>".gettype($status[1-1]);
+		echo "<br>".$status[1-1]."<br>";
+        echo "<br>";
+        for ($i = 1 ; $i <= 10 ; $i++)
+        {
+            for ($j = 1;$j<=4;$j++)
+            {
+                $stage = $i . '-' . $j;
+                echo $stage . "=";
+                echo $status[$stage] . "<br>";
+            }
+        }
+        echo "---------------<br>";
 		//埃及
 		//支線1
 		if( $status['1-1']==1 and $status['2-1']==1 and $status['3-1']==1 and $status['4-1']==1 )
@@ -240,11 +255,14 @@ class add_score
         $rs->bindValue(':id' , $id);
         $rs->bindValue(':new' , $new);
         $rs->execute();
+        echo "<br>";
         for ($i = 1 ; $i <= 10 ; $i++)
         {
             for ($j = 1;$j<=4;$j++)
             {
                 $stage = $i . '-' . $j;
+                echo $stage . "=";
+                echo $status[$stage] . "<br>";
                 $rs = $this->dbh->prepare('update rank set `' . $stage . '`=:tmp where id=:id');
                 $rs->bindValue(':id' , $id);
                 $rs->bindValue(':tmp' , $status[$stage]);
