@@ -37,9 +37,10 @@ promise
     })
     .then(()=>{
       let html = "";
-      data.sort((a,b)=>{
-        return a.score<b.score;
-      }).forEach((o,i)=>{
+      // data.sort((a,b)=>{
+      //   return a.score<b.score;
+      // })
+      data.forEach((o,i)=>{
         html += `
           <div class="opt">
             <div class="rank">${i+1}</div>
