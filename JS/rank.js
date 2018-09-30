@@ -15,7 +15,7 @@ $(document).ready(function(){
   });
   setInterval(()=>{
     $.ajax({
-      url: "./rank.json",
+      url: "./rank.php",
       data:"json",
       method: "GET",
       success: (data) => {
