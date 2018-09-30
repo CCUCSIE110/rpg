@@ -1,12 +1,57 @@
-{
-  "data":[
-  { "rank":1,"name":"aaaaaaaaaaaaa","score":75},
-  { "rank":2,"name":"eeeeeeeeee","score":150},
-  { "rank":3,"name":"ffffffffff","score":66},
-  { "rank":4,"name":"aaawww","score":569},
-  { "rank":5,"name":"我好餓","score":23},
-  { "rank":6,"name":"wweeew","score":71},
-  { "rank":7,"name":"www","score":98},
-  { "rank":8,"name":"wwwwww","score":78}
-]
-}
+[{
+  "id": "5",
+  "0": "5",
+  "name": "\u7b2c\u4e94\u5c0f\u968a",
+  "1": "\u7b2c\u4e94\u5c0f\u968a",
+  "score": "4300",
+  "2": "4300"
+}, {
+  "id": "6",
+  "0": "6",
+  "name": "\u7b2c\u516d\u5c0f\u968a",
+  "1": "\u7b2c\u516d\u5c0f\u968a",
+  "score": "3800",
+  "2": "3800"
+}, {
+  "id": "7",
+  "0": "7",
+  "name": "\u7b2c\u4e03\u5c0f\u968a",
+  "1": "\u7b2c\u4e03\u5c0f\u968a",
+  "score": "2600",
+  "2": "2600"
+}, {
+  "id": "8",
+  "0": "8",
+  "name": "\u7b2c\u516b\u5c0f\u968a",
+  "1": "\u7b2c\u516b\u5c0f\u968a",
+  "score": "1300",
+  "2": "1300"
+}, {
+  "id": "1",
+  "0": "1",
+  "name": "\u7b2c\u4e00\u5c0f\u968a",
+  "1": "\u7b2c\u4e00\u5c0f\u968a",
+  "score": "600",
+  "2": "600"
+}, {
+  "id": "2",
+  "0": "2",
+  "name": "\u7b2c\u4e8c\u5c0f\u968a",
+  "1": "\u7b2c\u4e8c\u5c0f\u968a",
+  "score": "0",
+  "2": "0"
+}, {
+  "id": "3",
+  "0": "3",
+  "name": "\u7b2c\u4e09\u5c0f\u968a",
+  "1": "\u7b2c\u4e09\u5c0f\u968a",
+  "score": "0",
+  "2": "0"
+}, {
+  "id": "4",
+  "0": "4",
+  "name": "\u7b2c\b\u56db\u5c0f\u968a",
+  "1": "\u7b2c\b\u56db\u5c0f\u968a",
+  "score": "0",
+  "2": "0"
+}]

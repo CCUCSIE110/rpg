@@ -1,17 +1,30 @@
 $(document).ready(function(){
-  $.getJSON("index.php").then((res)=>{
+  $.getJSON('index.php').then((res) => {
     console.log("A");
     console.log(res);
     show_stage(res);
   })
 });
 setInterval(()=>{
-  fetch("./index.php").then((response)=>{
-    return response.json();
-  }).then((j)=>{
-    show_stage(j);
+  $.ajax({
+    url: "index.php",
+    method: "GET",
+    data: "json",
+    success: (data)=>{
+      console.log(data);
+      show_stage(data);
+    },
+    error: (xhr,ajaxOption,thrownError)=>{
+      console.log("Fail to fetch data of index");
+      // console.log(xhr);
+      console.log(thrownError);
+    },
+    complete: ()=>{
+      console.log('complete to fetch data of index');
+    }
   })
-},15000)
+}, 15000)
+// 15000
 function show_stage(data) {
   var promise = Promise.resolve();
   promise

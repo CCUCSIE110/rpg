@@ -14,16 +14,33 @@ $(document).ready(function(){
     $(o.target).addClass("nav_highlight");
   });
   setInterval(()=>{
-    fetch("./rank.php").then((response)=>{
-      console.log(response.json());
-      return response.json();
-    }).then((j)=>{
-      console.log(j);
-      show_rank(j);
-
-    }).catch((err)=>{
-      console.log(err);
+    $.ajax({
+      url: "./rank.json",
+      data:"json",
+      method: "GET",
+      success: (data) => {
+          console.log(data);
+          show_rank(data);
+        },
+        error: (xhr, ajaxOption, thrownError) => {
+          console.log("Fail to fetch data of rank");
+          // console.log(xhr);
+          console.log(thrownError);
+        },
+        complete: () => {
+          console.log('complete to fetch data of rank');
+        }
     })
+    // fetch("./rank.php").then((response)=>{
+    //   console.log(response.json());
+    //   return response.json();
+    // }).then((j)=>{
+    //   console.log(j);
+    //   show_rank(j);
+
+    // }).catch((err)=>{
+    //   console.log(err);
+    // })
   },15000);
 });
 function show_rank(data){
